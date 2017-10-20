@@ -79,8 +79,9 @@ private void dbglog(string s)
 version(debugServer)
 const GUID VDServerClassFactory_iid = uuid("002a2de9-8bb6-484d-9A02-7e4ad4084715");
 else
-const GUID VDServerClassFactory_iid = uuid("002a2de9-8bb6-484d-9902-7e4ad4084715");
-const GUID DParserClassFactory_iid  = uuid("002a2de9-8bb6-484d-AA05-7e4ad4084715"); // needs VDServer, not factory
+const GUID VDServerClassFactory_iid  = uuid("002a2de9-8bb6-484d-9902-7e4ad4084715");
+const GUID DParserClassFactory_iid   = uuid("002a2de9-8bb6-484d-AA05-7e4ad4084715"); // needs VDServer, not factory
+const GUID DMDServerClassFactory_iid = uuid("002a2de9-8bb6-484d-9906-7e4ad4084715");
 
 __gshared GUID gServerClassFactory_iid = VDServerClassFactory_iid;
 __gshared GUID IVDServer_iid = IVDServer.iid;
