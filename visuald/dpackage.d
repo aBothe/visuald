@@ -1426,11 +1426,12 @@ class GlobalOptions
 				{
 					foreach(string f; dirEntries(rootsDir, "*", SpanMode.shallow, false))
 						if(std.file.isDir(f) && f > UCRTVersion)
-						{
-							string bname = baseName(f);
-							if(!bname.empty && isDigit(bname[0]))
-								UCRTVersion = bname;
-						}
+							if (std.file.exists(f ~ r"\ucrt\x86\libucrt.lib"))
+							{
+								string bname = baseName(f);
+								if(!bname.empty && isDigit(bname[0]))
+									UCRTVersion = bname;
+							}
 				}
 				catch(Exception)
 				{
