@@ -91,7 +91,7 @@
   <cv2pdbOptions>-s.</cv2pdbOptions>
   <objfiles />
   <linkswitches />
-  <libfiles>uuid.lib advapi32.lib comdlg32.lib ole32.lib ..\sdk\lib\oleaut32.lib ..\sdk\lib\comctl32.lib shell32.lib gdi32.lib winmm.lib</libfiles>
+  <libfiles>advapi32.lib comdlg32.lib ole32.lib ..\sdk\lib\oleaut32.lib ..\sdk\lib\comctl32.lib shell32.lib gdi32.lib winmm.lib</libfiles>
   <libpaths />
   <deffile />
   <resfile />

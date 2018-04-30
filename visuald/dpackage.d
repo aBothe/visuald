@@ -1605,7 +1605,8 @@ class GlobalOptions
 			pasteIndent         = getBoolOpt("pasteIndent", true);
 
 			scope RegKey keyDParser = new RegKey(HKEY_CLASSES_ROOT, "CLSID\\{002a2de9-8bb6-484d-AA05-7e4ad4084715}", false);
-			useDParser          = true; // getBoolOpt("useDParser2", keyDParser.key !is null);
+			version(all) useDParser    = getBoolOpt("useDParser2", keyDParser.key !is null);
+			else  useDParser    = true;
 			mixinAnalysis       = getBoolOpt("mixinAnalysis", false);
 			UFCSExpansions      = getBoolOpt("UFCSExpansions", true);
 			sortExpMode         = getBoolOpt("sortExpMode", 0);
